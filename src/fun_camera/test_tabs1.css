@@ -1,0 +1,11 @@
+#id_div_btns {
+    display:inline-block;
+    border-style: dashed;
+    width: 100px;
+}
+
+#id_div_display {
+    display:inline-block;
+    width: 800px;
+    border-style: dashed;
+}

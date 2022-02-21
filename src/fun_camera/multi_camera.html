@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>web获取设置和切换摄像头</title>
+<!--		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>-->
+		<script src="../lib/vue326.js"></script>
+	</head>
+	<body>
+		<div id="container-video">
+			<video id="video" width="500" height="300" autoplay></video>
+			<br>
+			<select id="video-all"></select>
+			<br>
+			<button id="stop" @click="btn_stop">摄像头停止</button>
+			<button id="reopen" @click="btn_reopen">摄像头重启</button>
+			<br>
+			<br>
+			<button id="snap" @click="btn_snap">摄像头照相功能</button>
+			<br>
+			<canvas id="canvas" width="500" height="300"></canvas>
+		</div>
+		
+	</body>
+</html>
+<script src="./multi_camera.js">		</script>
+
+
+
+
+

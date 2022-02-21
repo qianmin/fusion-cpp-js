@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				<meta charset="UTF-8">
+				<!--    <link href="./index.css" rel="stylesheet">-->
+				<title>Hello World!</title>
+				<script src="../lib/vue326.js"></script>
+				
+		  
+		</head>
+
+
+    <body>
+				<div id="layout_all">
+				<!--		  相机-->
+				<!--		  mmap操作-->
+				  <div id="layout_mmap">
+					  
+					  <span id="id_div_property">
+						  <label>0 mmap 设置</label>
+						  <br>
+						  <label>共享内存id:&nbsp&nbsp</label>
+						  <input id="id_mmap_name" value="share_cnm">
+						  <label>共享大小:&nbsp&nbsp</label>
+						  <input id="id_mmap_size" value=6220800>
+					  </span>
+					
+					  
+					  <span id="mmap">
+						  <br>
+						  <label>1 mmap 操作</label>
+						  <label>1: 选择文件显示</label>
+						  <input type="file" id="image_uploads" name="image_uploads"
+						         accept=".jpg, .jpeg, .png" @change="select_change">
+						  <br>
+						  
+						  <label>2:</label>
+						  <button id="btn_write" @click="btn_write_mmp">
+							  将下方图片写入mmp(一帧）
+						  </button>
+						  <br>
+						  
+						  <label>3:</label>
+						  <button id="btn_read" @click="btn_read_mmap">
+							  读取一帧mmp图片
+						  </button>
+						  <br>
+						  
+						  <label>4:</label>
+						  <button id="btn_read_may" @click="btn_read_mmap_many">
+							  连续读取mmp图片
+						  </button>
+					  </span>
+					
+					  
+					  <label>2 内容显示</label>
+					  <span id="id_div_mmap_show">
+						  <canvas id="id_canvas1" width="600" height="400"></canvas>
+					  </span>
+				  </div>
+				
+				</div>
+		  
+    </body>
+
+</html>
+<script src="mmap_img_v4.js"></script>
+
+
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta http-equiv="X-UA-Compatible" content="ie=edge">
+				<meta name="keywords" content="tailwind,tailwindcss,tailwind css,css,starter template,free template,admin templates, admin template, admin dashboard, free tailwind templates, tailwind example">
+				<!-- Css -->
+				<link rel="stylesheet" href="./dist/styles.css">
+				<link rel="stylesheet" href="./dist/all.css">
+				<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i" rel="stylesheet">
+				<title>Dashboard | Tailwind Admin</title>
+				
+				<script src="../lib/vue326.js"></script>
+				<link rel="stylesheet" href="./qianmin.css">
+				
+		</head>
+		<body>
+<!--				总体div-->
+				<div class="mx-auto bg-grey-400" id="id_div_all">
+<!--						头部标题栏-->
+						<header class="bg-nav">
+								<div class="flex justify-between">
+										<div class="p-1 mx-3 inline-flex items-center">
+												<i class="fas fa-bars pr-2 text-white" @click="sidebarToggle"></i>
+												<h1 class="text-white p-2">Logo</h1>
+										</div>
+								
+								</div>
+						</header>
+<!--						中间div-->
+						<div class="flex flex-1" id="id_div_middle">
+<!--								左侧标题栏-->
+								<aside id="sidebar" class="bg-side-nav w-1/2 md:w-1/6 lg:w-1/6 border-r border-side-nav hidden md:block lg:block">
+										
+										<ul class="list-reset flex flex-col">
+<!--												bg-white-->
+												<li class=" w-full h-full py-3 px-2 border-b border-light-border qm-flag" @click="btn_fun1" id="id_li_fun1">
+														<a
+															class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+																<i class="fas fa-tachometer-alt float-left mx-2"></i>
+																相机
+																<span><i class="fas fa-angle-right float-right"></i></span>
+														</a>
+												</li>
+												<li class="w-full h-full py-3 px-2 border-b border-light-border qm-flag" @click="btn_fun2" id="id_li_fun2">
+														<a
+															class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+																<i class="fab fa-wpforms float-left mx-2"></i>
+																mmap操作
+																<span><i class="fa fa-angle-right float-right"></i></span>
+														</a>
+												</li>
+												
+												<li class="w-full h-full py-3 px-2 bg-white qm-flag" @click="btn_fun3" id="id_li_fun3">
+														<a
+															class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline ">
+																<i class="far fa-file float-left mx-2"></i>
+																Pages
+																<span><i class="fa fa-angle-down float-right"></i></span>
+														</a>
+														<ul class="list-reset -mx-2 bg-white-medium-dark">
+																<li class="border-t mt-2 border-light-border w-full h-full px-2 py-3">
+																		<a
+																			class="mx-4 font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+																				Login Page
+																				<span><i class="fa fa-angle-right float-right"></i></span>
+																		</a>
+																</li>
+																<li class="border-t border-light-border w-full h-full px-2 py-3">
+																		<a
+																			class="mx-4 font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+																				Register Page
+																				<span><i class="fa fa-angle-right float-right"></i></span>
+																		</a>
+																</li>
+																<li class="border-t border-light-border w-full h-full px-2 py-3">
+																		<a
+																			class="mx-4 font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+																				404 Page
+																				<span><i class="fa fa-angle-right float-right"></i></span>
+																		</a>
+																</li>
+														</ul>
+												</li>
+										</ul>
+								
+								</aside>
+<!--								右侧功能区-->
+								<main class="bg-white-300 flex-1 p-3 overflow-hidden">
+<!--										该div实际 功能操作-->
+										<div id="id_div_fun">
+												
+
+												<div id="id_div_fun1">
+														<webview id="id_webview_fun1"
+														         src="../fun_camera/multi_camera.html"
+														         nodeintegration
+														         webpreferences="contextIsolation=no"
+														         style="display:inline-flex; width:100%; height:800px">
+														</webview>
+<!--														<webview id="id_webview_baidu" src="http://www.baidu.com/" nodeintegration></webview>-->
+												</div>
+												
+												<div id="id_div_fun2">
+<!--														<webview id="id_webview_fun2" src="../fun_camera/mmap_img_v4.html" nodeintegration webpreferences="contextIsolation=no"-->
+<!--														         style="display:inline-flex; width:100%; height:800px">></webview>-->
+														<webview
+															id="id_webview_fun1"
+															src="../fun_camera/mmap_img_v4.html"
+															nodeintegration
+															webpreferences="contextIsolation=no"
+															style="display:inline-flex; width:100%; height:800px">
+														</webview>
+												</div>
+										
+										</div>
+								</main>
+						</div>
+<!--						底部div-->
+						<footer class="bg-grey-darkest text-white p-2">
+								<div class="flex flex-1 mx-auto">&copy; My Design</div>
+						</footer>
+				</div>
+				
+		</body>
+</html>
+
+<script src="./qianmin.js"></script>
